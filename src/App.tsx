@@ -1,19 +1,25 @@
 
-
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "./App.css";
 import { Button } from "primereact/button";
-
 import { OverlayPanel } from "primereact/overlaypanel";
 
+
+
+
+
+
+
+
+
+
 const App = () => {
-  const [rowClick, setRowClick] = useState<boolean>(false);
+  const [rowClick, _setRowClick] = useState<boolean>(false);
   const [selectedProducts, setSelectedProducts] = useState<any[]>([]);
   // const [limit, setLimit] = useState<number>(10); 
 
@@ -169,7 +175,7 @@ const App = () => {
             value={artworks}
             selectionMode={rowClick ? undefined : "checkbox"}
             selection={selectedProducts}
-            onSelectionChange={(e) => { 
+            onSelectionChange={(e: any) => { 
 
               //to retrieve selected rows and append the next selection
               const newSelection = e.value;  
@@ -214,7 +220,7 @@ const App = () => {
             showGridlines
             tableStyle={{ minWidth: "70rem", height: "400px" }}
           >
-            {!rowClick && (<Column selectionMode="multiple" header={<div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><Button className="v-button p-button-text p-button-plain no-hover" icon="pi pi-chevron-down" onClick={(e) => op.current.toggle(e)} /></div>} headerStyle={{ width: "3rem" }} />)}
+            {!rowClick && (<Column selectionMode="multiple" header={<div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><Button className="v-button p-button-text p-button-plain no-hover" icon="pi pi-chevron-down" onClick={(e) => op.current?.toggle(e)} /></div>} headerStyle={{ width: "3rem" }} />)}
             <Column field="title" header="Title" style={{ width: "25%" }} />
             <Column field="place_of_origin"  header="Place of Origin" style={{ width: "15%" }}/>
             <Column field="artist_display" header="Artist Display" style={{ width: "25%" }}/>
