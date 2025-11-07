@@ -1,0 +1,159 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6fb;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden; 
+}
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  padding: 3rem 1rem;
+
+  margin-left: 100px;
+}
+
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.app-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.app-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+
+.table-container {
+  width: 90%; 
+  max-width: 1400px; 
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; 
+  border: none;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  overflow-x: auto;
+}
+
+
+.p-datatable {
+  font-size: 1rem;
+  width: 100%; 
+  max-width: 1300px; 
+  border-collapse: collapse;
+  margin: 0 auto; 
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+
+
+.nav-btn {
+  background-color: #221f4e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  height: 56px;
+  width: 160px;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background-color: #3730a3;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-weight: bold;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .p-datatable {
+    font-size: 0.9rem;
+  }
+
+  .app-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+.v-button {
+  background: none;
+  color: #222;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px; 
+  height: auto;
+  width: auto;
+  line-height: 1;
+  transition: none;
+}
+
+.v-button:hover {
+  color: #000; 
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+
+.v-button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #333 !important;
+  cursor: pointer;
+  padding: 0 !important;
+  margin: 10px;
+}
+
+.v-button:hover,
+.v-button:focus {
+  background: none !important;
+  border: white ;
+  box-shadow: none !important;
+}
+
+.no-hover:hover {
+  background: none !important;
+}
